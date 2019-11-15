@@ -1,1 +1,1 @@
-# shell_project
+# shell_tests

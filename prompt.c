@@ -30,7 +30,6 @@ int main (void)
 			return (0);
 		}
 		splitted = split_line(line);
-		printf("%s\n", splitted[0]);
 		if (strcmp(splitted[0], com) == 0)
 		{
 			printf("Entro\n");
@@ -86,13 +85,13 @@ void forking(char **splitted)
 {
 	pid_t child;
 	int status;
-	char *arr[] = {"/bin/ls", "-l", NULL};
+	char *arr[] = {"/bin/ls", "-l", "/tmp", NULL};
 
-	printf("before");
 	child = fork();
 	if (child == 0)
 	{
 		printf("iji");
+		//fdfsd
 		execve(arr[0], arr, NULL);
 		sleep(1);
 	}
